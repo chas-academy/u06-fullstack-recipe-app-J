@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { ReceptComponent } from './recept/recept.component';
 import { OnlineComponent } from './online/online.component';
 import{ RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './layout/publico/login/login/login.component';
 
 
 const routes: Routes = [
@@ -32,7 +33,8 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     ReceptComponent,
-    OnlineComponent
+    OnlineComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
