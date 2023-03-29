@@ -12,6 +12,8 @@ import { PublicModule } from './public/public.module';
 import { LogoutComponent } from './public/logout/logout.component';
 import { SecureComponent } from './secure/secure.component';
 import { AppRoutingModule } from './app-routing.module';
+import { RegisterComponent } from './public/register/register.component';
+
 
 const routes: Routes = [
   {
@@ -41,6 +43,7 @@ const routes: Routes = [
     OnlineComponent,
     SecureComponent,
     LogoutComponent,
+    RegisterComponent,
     
   ],
 
@@ -54,7 +57,8 @@ const routes: Routes = [
     RouterModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

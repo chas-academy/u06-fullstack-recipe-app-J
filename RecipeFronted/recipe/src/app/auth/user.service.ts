@@ -6,10 +6,12 @@ import { catchError } from 'rxjs/operators';
 import { User } from '../user';
 import { Router } from '@angular/router';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+  httpClient: any;
  
   logout() {
     throw new Error('Method not implemented.');
@@ -40,6 +42,7 @@ export class UserService {
      localStorage.setItem("token", res.token);
     })
  }
+
 
 
   private handleError(error: HttpErrorResponse) {

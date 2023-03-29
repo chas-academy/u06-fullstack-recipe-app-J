@@ -18,8 +18,8 @@ export class LogoutComponent {
   me = {
     id: 1,
     name :"",
-    email: "sofia@sofia.sofia",
-    password: "sofiasofia",
+    email: "",
+    password: "",
    }
   
 

@@ -4,7 +4,7 @@ import { PublicComponent } from './public.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+
 
 
 
@@ -13,7 +13,7 @@ import { RegisterComponent } from './register/register.component';
   declarations: [
     PublicComponent,
     LoginComponent,
-    RegisterComponent
+  
     
   ],
   imports: [

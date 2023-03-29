@@ -1,6 +1,9 @@
 
 import { Component, OnInit} from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { DataService } from 'src/app/services/data.service';
+import { Register } from './register.model';
+
+
 
 
 @Component({
@@ -9,33 +12,26 @@ import { FormBuilder, Validators } from '@angular/forms';
   
 })
 export class RegisterComponent implements OnInit{
+   register = new Register();
+   data: any;
+   message: any;
+   
 
 
-form: any;
-  router: any;
-  http: any;
+  constructor(private dataservice: DataService) {  }
 
-  constructor(private fb: FormBuilder) {
-    
-  }
   ngOnInit(){
-   this.form = this.fb.group({
-    first_name: ['', Validators.required],
-    last_name: ['', Validators.required],
-    email: ['', [Validators.required,Validators.email]],
-    password: ['', [Validators.required]],
-    password_confirmation: ['', Validators.required],
-    
-   });
+   }
+
+   submit(){
+    this.dataservice.registerUser(this.register).subscribe(res=>{ 
+      this.data = (res);
+       this.message = this.data.message;
+    })
+   }
+  
+  
+  
   }
 
 
-  submit(){
-    const formData = this.form.getRawValue();
-
-    this.http.post('http://localhost:800/register', formData).subscribe(
-    );
-  }
-
-
-}
