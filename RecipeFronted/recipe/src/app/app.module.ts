@@ -5,8 +5,13 @@ import { HomeComponent } from './home/home.component';
 import { ReceptComponent } from './recept/recept.component';
 import { OnlineComponent } from './online/online.component';
 import{ RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './layout/publico/login/login/login.component';
-
+import{ NgImageSliderModule} from 'ng-image-slider';
+import{ FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { PublicModule } from './public/public.module';
+import { LogoutComponent } from './public/logout/logout.component';
+import { SecureComponent } from './secure/secure.component';
+import { AppRoutingModule } from './app-routing.module';
 
 const routes: Routes = [
   {
@@ -34,11 +39,22 @@ const routes: Routes = [
     HomeComponent,
     ReceptComponent,
     OnlineComponent,
-    LoginComponent
+    SecureComponent,
+    LogoutComponent,
+    
   ],
+
+
   imports: [
+    NgImageSliderModule,
+    RouterModule.forRoot(routes),
     BrowserModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule,
+    PublicModule,
+    RouterModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

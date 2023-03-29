@@ -1,1 +1,16 @@
-<p>recept works!</p>
+<div class="container-fluid">
+    <form class="d-flex  w-100 p-4 px-4" role="search">
+<input class="form-control me-1" type="text" [(ngModel)]="searchquery">
+<button class="btn btn-outline-success" type="button" (click)="getRecipes()">Get recipes</button>
+</form>
+
+<article *ngFor="let recipe of allRecipes">
+  <h2>{{recipe.label}}</h2>
+  <img class="card-img-top" class="d-inline p-2 " [src]="recipe.image" [alt]="recipe.label">
+<p>here are the ingredients of the meal</p>
+<ul>
+  <li *ngFor="let ingredient of recipe.ingredientLines">
+    {{ingredient}} </li>
+</ul>
+</article>
+</div>

@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GitHubService } from './git-hub.service';
+import { UserService } from './user.service';
 
-describe('GitHubService', () => {
-  let service: GitHubService;
+describe('UserService', () => {
+  let service: UserService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GitHubService);
+    service = TestBed.inject(UserService);
   });
 
   it('should be created', () => {
