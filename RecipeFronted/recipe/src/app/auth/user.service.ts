@@ -12,13 +12,10 @@ import { Router } from '@angular/router';
 })
 export class UserService {
   httpClient: any;
- 
-  logout() {
-    throw new Error('Method not implemented.');
-  }
   
   configUrl =  "http://127.0.0.1:8000/api/"; 
   username: any=""
+
   httpOptions ={
     headers: new HttpHeaders ({
       'Content-Type': 'application/json',
@@ -36,10 +33,11 @@ export class UserService {
      })
   }
 
-  logoutUser(user: User){
-    this.http.post<any>(this.configUrl + "logout",user,this.httpOptions).pipe(catchError(this.handleError)).subscribe(res=>{
+  logoutUser(User: User){
+    this.http.post<any>(this.configUrl + "logout",User,this.httpOptions).pipe(catchError(this.handleError)).subscribe(res=>{
      console.log(res)
-     localStorage.setItem("token", res.token);
+     localStorage.removeItem('token');
+     localStorage.removeItem('id');
     })
  }
 

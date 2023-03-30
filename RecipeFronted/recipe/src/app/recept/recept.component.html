@@ -1,16 +1,24 @@
-<div class="container-fluid">
+<div class="container position-absolute top-50 start-50 translate-middle rounded-3 ">
     <form class="d-flex  w-100 p-4 px-4" role="search">
 <input class="form-control me-1" type="text" [(ngModel)]="searchquery">
-<button class="btn btn-outline-success" type="button" (click)="getRecipes()">Get recipes</button>
+<button class="btn btn-danger" type="button" (click)="getRecipes()">Get recipes</button>
 </form>
+</div>
 
+
+
+<section>
+  <div class="container position-absolute top-80 start-80" >
+  <div  class="d-flex align-content-around flex-wrap">
 <article *ngFor="let recipe of allRecipes">
-  <h2>{{recipe.label}}</h2>
-  <img class="card-img-top" class="d-inline p-2 " [src]="recipe.image" [alt]="recipe.label">
+  <h2 >{{recipe.label}}</h2>
+  <img  [src]="recipe.image" [alt]="recipe.label">
 <p>here are the ingredients of the meal</p>
 <ul>
-  <li *ngFor="let ingredient of recipe.ingredientLines">
+  <li  *ngFor="let ingredient of recipe.ingredientLines">
     {{ingredient}} </li>
 </ul>
 </article>
 </div>
+</div>
+</section>

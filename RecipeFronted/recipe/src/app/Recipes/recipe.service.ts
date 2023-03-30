@@ -13,7 +13,7 @@ export class RecipeService {
 
 appid= "86762442";
 appkey="f57d13d15f211b41592686199f95ba6c";
-urlConfig ="https://api.edamam.com/api/recipes/v2?type=public"
+urlConfig ="https://api.edamam.com/api/recipes/v2?type=public";
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -26,9 +26,10 @@ urlConfig ="https://api.edamam.com/api/recipes/v2?type=public"
 
 
   getRecipes(q: string){
-    let searchquery = this.urlConfig + "&q=" + q + "&app_id=" + this.appid + "&app_key=" + this.appkey + "&cuisineType=American&mealType=Dinner&field=label&field=image";
+    let searchquery = this.urlConfig + "&q=" + q + "&app_id=" + this.appid + "&app_key=" + this.appkey + "&diet=high-protein&health=alcohol-free&health=gluten-free&health=low-sugar&cuisineType=American&cuisineType=Asian&cuisineType=Italian&cuisineType=South%20American&mealType=Breakfast&mealType=Dinner&mealType=Lunch&mealType=Teatime&dishType=Desserts&dishType=Salad&field=label&field=image";
   return this.http.get<any>(searchquery, this.httpOptions);
   }
+
 
 
 

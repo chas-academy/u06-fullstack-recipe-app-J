@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/auth/user.service';
 
@@ -8,24 +10,10 @@ import { UserService } from 'src/app/auth/user.service';
 })
 export class LogoutComponent {
 
-  constructor(private userService: UserService, private router: Router) {}
-
-  ngOnInit() {
-    this.userService.logout();
-    this.router.navigate(['login']);
-  }
-
-  me = {
-    id: 1,
-    name :"",
-    email: "",
-    password: "",
-   }
-  
 
 
-  logout(){
-    this.userService.logoutUser(this.me)
-  }
 
 }
+
+
+
