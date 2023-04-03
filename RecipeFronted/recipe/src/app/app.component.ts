@@ -33,9 +33,6 @@ export class AppComponent  implements OnInit{
       result => console.log(result)
     );
   
-  
-  
-  
   }
 
   logout(){

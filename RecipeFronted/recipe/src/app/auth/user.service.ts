@@ -34,10 +34,10 @@ export class UserService {
   }
 
   logoutUser(User: User){
-    this.http.post<any>(this.configUrl + "logout",User,this.httpOptions).pipe(catchError(this.handleError)).subscribe(res=>{
+    this.http.post<any>(this.configUrl + "logout", User, this.httpOptions).pipe(catchError(this.handleError)).subscribe(res=>{
      console.log(res)
-     localStorage.removeItem('token');
-     localStorage.removeItem('id');
+     localStorage.removeItem('token')
+     localStorage.removeItem('id')
     })
  }
 

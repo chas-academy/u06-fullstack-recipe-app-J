@@ -1,6 +1,6 @@
 <div class="container position-absolute top-50 start-50 translate-middle rounded-3 ">
-    <form class="d-flex  w-100 p-4 px-4" role="search">
-<input class="form-control me-1" type="text" [(ngModel)]="searchquery">
+    <form class="d-flex  w-100 p-4 px-4" role="search" >
+<input class="form-control me-1" type="text" [(ngModel)]="searchquery" [ngModelOptions]="{standalone: true}">
 <button class="btn btn-danger" type="button" (click)="getRecipes()">Get recipes</button>
 </form>
 </div>
