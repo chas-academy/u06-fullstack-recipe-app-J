@@ -1,18 +1,20 @@
+{{title}}
+
 <div class="container position-absolute top-50 start-50 translate-middle rounded-3 ">
     <form class="d-flex  w-100 p-4 px-4" role="search" >
 <input class="form-control me-1" type="text" [(ngModel)]="searchquery" [ngModelOptions]="{standalone: true}">
-<button class="btn btn-danger" type="button" (click)="getRecipes()">Get recipes</button>
+<button class="btn btn-danger" type="button" (click)="getRecept()">Get recipes</button>
 </form>
 </div>
 
 
 
-<section>
-  <div class="container position-absolute top-80 start-80" >
-  <div  class="d-flex align-content-around flex-wrap">
-<article *ngFor="let recipe of allRecipes">
-  <h2 >{{recipe.label}}</h2>
-  <img  [src]="recipe.image" [alt]="recipe.label">
+<section class="container position-absolute top-100 rounded-3">
+  <div  >
+  <div  class="d-flex justify-content-around flex-wrap">
+<article  *ngFor="let recipe of allRecept">
+  <h2><a [routerLink]="'recipe/'+recipe.idref" routerLinkActive="active">{{recipe.label}}</a></h2>
+  <img class="container position-relative" [src]="recipe.image" [alt]="recipe.label">
 <p>here are the ingredients of the meal</p>
 <ul>
   <li  *ngFor="let ingredient of recipe.ingredientLines">

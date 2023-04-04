@@ -12,6 +12,8 @@ import { SecureComponent } from './secure/secure.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RegisterComponent } from './public/register/register.component';
 import { ReceptComponent } from './recept/recept.component';
+import { RecipeComponent } from './recipe/recipe/recipe.component';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -25,6 +27,7 @@ const routes: Routes = [
     path:'recept',
     component: ReceptComponent
   },
+
   {
     path: '',
     redirectTo: '/home',
@@ -44,6 +47,7 @@ const routes: Routes = [
     OnlineComponent,
     SecureComponent,
     RegisterComponent,
+    RecipeComponent,
    
     
   ],
@@ -58,6 +62,7 @@ const routes: Routes = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    CommonModule
  
   ],
   providers: [],

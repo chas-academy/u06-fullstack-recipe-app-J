@@ -11,25 +11,30 @@ import { catchError} from 'rxjs/operators';
 })
 export class RecipeService {
 
-appid= "697480af";
-appkey="db839f35a77ae5a817a3cd19ea197996";
-urlConfig ="https://api.edamam.com/api/recipes/v2?type=public";
+appid = "697480af";
+appkey = "db839f35a77ae5a817a3cd19ea197996";
+urlConfig = "https://api.edamam.com/api/recipes/v2?type=public"
 
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      'Accept-Language': 'en'
+      'Accept-Language': 'en',
     })
   }
     
-  constructor(private http:HttpClient) {  }
+  constructor(private http: HttpClient) {  }
 
 
-  getRecipes(q: string){
+  getRecept(q: string){
     let searchquery = this.urlConfig + "&q=" + q + "&app_id=" + this.appid + "&app_key=" + this.appkey + "&cuisineType=Chinese&mealType=Dinner&mealType=Lunch&mealType=Teatime&field=label&field=image";
   return this.http.get<any>(searchquery, this.httpOptions);
   }
 
+  
+  getRecipe(id: string){
+    let searchquery = "https://api.edamam.com/api/recipes/v2/" + id  + "?type=public&app_id=" + this.appid + "&app_key=" + this.appkey + "&field=label&field=image&field=ingredientLines&field=calories";
+  return this.http.get<any>(searchquery, this.httpOptions);
+  }
 
 
 

@@ -11,23 +11,24 @@ export class ReceptComponent {
   title = 'angular-external-api-show';
 
   searchquery = "";
-
+  allRecept: any;
 
    constructor(private recipeService:RecipeService){}
    
-   allRecipes: any;
+   
 
-   getRecipes(){
-    this.recipeService.getRecipes(this.searchquery).subscribe(result => {
-      let recipes = result.hits.map((data: any) => {
+   
+  getRecept(){
+    this.recipeService.getRecept(this.searchquery).subscribe(result => {
+      let recept = result.hits.map((data: any) => {
         let recipe = data.recipe;
-        recipe.selfref = data._links.self.href;
+        recipe.idref = data._links.self.href.slice(38,70);
         return recipe;
       })
    console.log(result.hits[0]);
-   console.log(recipes)
+   console.log(recept)
 
-   this.allRecipes = recipes;
+   this.allRecept = recept;
     })
    }
 }
