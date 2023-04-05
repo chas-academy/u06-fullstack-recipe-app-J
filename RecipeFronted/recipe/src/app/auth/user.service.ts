@@ -7,10 +7,6 @@ import { User } from '../user';
 import { Router } from '@angular/router';
 
 
-interface LogoutResponse {
-  message: string;
-}
-
 @Injectable({
   providedIn: 'root'
 })

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { RecipeService } from '../Recipes/recipe.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class ReceptComponent {
   searchquery = "";
   allRecept: any;
 
-   constructor(private recipeService:RecipeService){}
+   constructor(private recipeService:RecipeService,private route: ActivatedRoute){}
    
    
 

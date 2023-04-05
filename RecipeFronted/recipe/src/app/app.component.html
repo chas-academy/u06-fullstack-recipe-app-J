@@ -22,8 +22,8 @@
       </ul>
       <div class="navbar-nav">
   
-  <a *ngIf="!loggedIn" routerLink="/login">Login</a>
-  <button *ngIf="loggedIn" (click)="logout()">Logout</button>
+        <a  class="navbar-brand" routerLink="login" *ngIf="!loggedIn" >Login</a>
+        <a  class="navbar-brand" routerLink="/" (click)="logout" *ngIf="loggedIn" >Logout</a>
       </div>
       
     </div>
