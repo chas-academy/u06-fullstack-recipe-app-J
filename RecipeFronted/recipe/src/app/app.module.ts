@@ -14,6 +14,8 @@ import { RegisterComponent } from './public/register/register.component';
 import { ReceptComponent } from './recept/recept.component';
 import { RecipeComponent } from './recipe/recipe/recipe.component';
 import { CommonModule } from '@angular/common';
+import { UserService } from './auth/user.service';
+import { LoginComponent } from './public/login/login.component';
 
 
 
@@ -37,6 +39,7 @@ const routes: Routes = [
     path:'online',
     component: OnlineComponent
   },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({
@@ -48,6 +51,7 @@ const routes: Routes = [
     SecureComponent,
     RegisterComponent,
     RecipeComponent,
+    LoginComponent,
    
     
   ],
@@ -65,7 +69,7 @@ const routes: Routes = [
     CommonModule
  
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

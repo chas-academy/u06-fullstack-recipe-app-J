@@ -7,10 +7,15 @@ import { User } from '../user';
 import { Router } from '@angular/router';
 
 
+interface LogoutResponse {
+  message: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+ 
   httpClient: any;
   
   configUrl =  "http://127.0.0.1:8000/api/"; 
@@ -34,12 +39,12 @@ export class UserService {
   }
 
   logoutUser(User: User){
-    this.http.post<any>(this.configUrl + "logout", User, this.httpOptions).pipe(catchError(this.handleError)).subscribe(res=>{
+    this.http.post<any>(this.configUrl + "login", User, this.httpOptions).pipe(catchError(this.handleError)).subscribe(res=>{
      console.log(res)
-     localStorage.removeItem('token')
-     localStorage.removeItem('id')
+     localStorage.setItem("token", res.token)
     })
  }
+
 
 
 

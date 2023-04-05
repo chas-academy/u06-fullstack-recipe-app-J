@@ -21,15 +21,16 @@
        
       </ul>
       <div class="navbar-nav">
-       <a style=" margin-right: 20px;" class="nav-link" routerLink="/login" *ngIf="!loggedIn" >Login</a>
-        <a style=" margin-right: 20px;" class="nav-link" routerLink="/" *ngIf="loggedIn" (click)="logout()">Logout</a>
+  
+  <a *ngIf="!loggedIn" routerLink="/login">Login</a>
+  <button *ngIf="loggedIn" (click)="logout()">Logout</button>
       </div>
       
     </div>
   </div>
 </nav>
 
-<ng-image-slider [images]="imgCollection" #nav></ng-image-slider>
+
 
 
 <router-outlet></router-outlet>
