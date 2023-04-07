@@ -1,0 +1,12 @@
+div.oblique {
+    font-style: oblique;
+    font-size: small;
+    text-align: center;
+    padding: 20px;
+
+}
+
+img{
+    border-radius: 20px;
+    width: 300px;
+}

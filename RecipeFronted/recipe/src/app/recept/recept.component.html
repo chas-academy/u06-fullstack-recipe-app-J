@@ -12,13 +12,12 @@
 <!-- <section class="container position-absolute top-100 rounded-3">
   <div  >
   <div  class="d-flex justify-content-around flex-wrap"> -->
-
+<div class="oblique">
 <div class="container top-50">
   <div class="row">
-<div class="col-sm-4" *ngFor="let recipe of allRecept">
-  <h2><a [routerLink]="'recipe/'+recipe.idref" routerLinkActive="active">{{recipe.label}}</a></h2>
+<div class="col-sm-4 " *ngFor="let recipe of allRecept">
+  <h2><a class="btn btn-light" [routerLink]="'recipe/'+recipe.idref" routerLinkActive="active">{{recipe.label}}</a></h2>
   <img class="container position-relative " [src]="recipe.image" [alt]="recipe.label">
-<p>here are the ingredients of the meal</p>
 <ul>
   <li  *ngFor="let ingredient of recipe.ingredientLines">
     {{ingredient}} </li>
@@ -26,7 +25,7 @@
 </div>
 </div>
 </div>
-
+</div>
 
 
 <!-- </div>

@@ -30,8 +30,8 @@ export class HomeComponent {
     }, {
       image: 'https://eu-central-1.linodeobjects.com/tasteline/2019/05/rostade_och_rokta_potatisar_med_olkaramelliserad_lok-foto-martin-nordin-mathem.jpg',
       thumbImage: 'https://eu-central-1.linodeobjects.com/tasteline/2019/05/rostade_och_rokta_potatisar_med_olkaramelliserad_lok-foto-martin-nordin-mathem.jpg',
-      title: 'Image 5',
-      alt: 'Image 5'
+      title: 'Köttbullar med sås',
+      alt: 'köttbullar med sås'
     }, {
       image: 'https://static.mathem.se/shared/images/recipes/doublelarge/chili-och-citronglaserade-morotter-1080x1080px.jpeg',
       thumbImage: 'https://static.mathem.se/shared/images/recipes/doublelarge/chili-och-citronglaserade-morotter-1080x1080px.jpeg',

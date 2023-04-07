@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RegisterComponent } from './public/register/register.component';
 import { ReceptComponent } from './recept/recept.component';
 import { RecipeComponent } from './recipe/recipe/recipe.component';
+import { ContactComponent } from './contact/contact.component';
 /* import { CommonModule } from '@angular/common';
 import { UserService } from './auth/user.service'; */
 
@@ -40,6 +41,10 @@ const routes: Routes = [
     path:'online',
     component: OnlineComponent
   },
+  {
+    path:'contact',
+    component: ContactComponent
+  },
 
 ];
 
@@ -52,6 +57,7 @@ const routes: Routes = [
     SecureComponent,
     RegisterComponent,
     RecipeComponent,
+    ContactComponent,
   
    
     
