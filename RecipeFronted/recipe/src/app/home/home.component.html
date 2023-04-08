@@ -1,286 +1,159 @@
 
+
+
+
+
+<section id="hero" class="hero d-flex align-items-center section-bg">
+  <div class="container">
+    <div class="row justify-content-between gy-5">
+      <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+        <h2 data-aos="fade-up">Matglädje<br>Få mer som medlem</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Inspirera dig med våra senaste köpklara recept,
+          tips och idéer från våra matälskare.</p>
+        <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+        </div>
+      </div>
+      <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+        <img src="assets/img/hero-img.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 <ng-image-slider [images]="imgCollection" #nav></ng-image-slider>
 
 
 
-
-
-
- <!-- ======= Menu Section ======= -->
- <section id="menu" class="menu">
+<section id="portfolio" class="portfolio sections-bg">
   <div class="container" data-aos="fade-up">
 
+   
+    <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
 
-    <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+      <div>
+        <ul class="portfolio-flters">
+       
+          <li data-filter=".filter-product">Nyttiga frukostar</li>
+          <li data-filter=".filter-branding">Billigt & enkelt</li>
+          <li data-filter=".filter-books">Goda vardag</li>
+        </ul><!-- End Portfolio Filters -->
+      </div>
 
-      <li class="nav-item">
-        <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
-          <h4>Starters</h4>
-        </a>
-      </li><!-- End tab nav item -->
+      <div class="row gy-4 portfolio-container">
 
-      <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
-          <h4>Breakfast</h4>
-        </a><!-- End tab nav item -->
+        <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <a href="assets/img/portfolio/about-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/img/portfolio/about-2.jpg" class="img-fluid" alt=""></a>
+            <div class="portfolio-info">
+              <h4><a href="portfolio-details.html" title="More Details">Enkelt och gott</a></h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-      <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-lunch">
-          <h4>Lunch</h4>
-        </a>
-      </li><!-- End tab nav item -->
-
-      <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-dinner">
-          <h4>Dinner</h4>
-        </a>
-      </li><!-- End tab nav item -->
-
-    </ul>
-
-    <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
-
-      <div class="tab-pane fade active show" id="menu-starters">
-
-        <div class="tab-header text-center">
-          <p>Menu ideas</p>
-          <h3>Starters</h3>
+        <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <a href="assets/img/portfolio/about-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/img/portfolio/about-2.jpg" class="img-fluid" alt=""></a>
+            <div class="portfolio-info">
+              <h4><a href="portfolio-details.html" title="More Details">Enkelt och gott</a></h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+            </div>
+          </div>
         </div>
-
-        <div class="row gy-5">
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Magnam Tiste</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Aut Luia</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Est Eligendi</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Eos Luibusdam</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Eos Luibusdam</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Laboriosam Direva</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
+        <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <a href="assets/img/portfolio/about-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/img/portfolio/about-2.jpg" class="img-fluid" alt=""></a>
+            <div class="portfolio-info">
+              <h4><a href="portfolio-details.html" title="More Details">Enkelt och gott</a></h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+            </div>
+          </div>
         </div>
-      </div><!-- End Starter Menu Content -->
+      </div><!-- End Portfolio Container -->
+    </div>
+  </div>
+</section><!-- End Portfolio Section -->
 
-      <div class="tab-pane fade" id="menu-breakfast">
 
-        <div class="tab-header text-center">
-          <p>Menu ideas</p>
-          <h3>Breakfast</h3>
+
+<section id="departments" class="departments">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Dina favoriter</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam corporis, inventore asperiores officia ullam, molestias quo qui eum error quos, autem itaque sint voluptatum rem molestiae ab. Quam, aliquam corrupti.</p>
+    </div>
+
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <ul class="nav nav-tabs flex-column">
+          <li class="nav-item">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+              <h4>Västerbottensost</h4>
+              <p>Västerbottensost. 750 gram ungefärlig vikt.
+                Jfr-pris 198:-kr/kg.</p>
+            </a>
+          </li>
+          <li class="nav-item mt-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+              <h4>Jordgubbar
+              </h4>
+              <p>Klass 1. Spanien. 400 gr.
+                Jfr-pris 112:38kr/kg.</p>
+            </a>
+          </li>
+          <li class="nav-item mt-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+              <h4>Salami Milano              </h4>
+              <p>Jfr-pris 239:-kr/kg</p>
+            </a>
+          </li>
+          <li class="nav-item mt-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+              <h4>Kaviar</h4>
+              <p>Kalles Kaviar. 300g.
+                Jfr-pris 106:50kr/kg.</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-8">
+        <div class="tab-content">
+          <div class="tab-pane active show" id="tab-1">
+            <h3>Västerbottensost 14 Mån</h3>
+            <p class="fst-italic">
+              Västerbottensost® är en svensk grynpipig hårdost gjord på norrländsk komjölk och tillverkad vid det lilla mejeriet i Burträsk i Västerbotten. Den har en karaktäristisk, fyllig smak och en lagringstid om minst 14 månader.</p>
+            <img src="assets/img/276385.webp" alt="" class="img-fluid">
+            <p>Innehåll
+              Ingredienser: Pastöriserad norrländsk MJÖLK, salt, mjölksyrakultur, löpe, konserveringsmedel E202, E235 och E251.</p>
+          </div>
+          <div class="tab-pane" id="tab-2">
+            <h3>Jordgubbar            </h3>
+            <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+            <img src="assets/img/48768.webp" alt="" class="img-fluid">
+            <p>Vi vill därför vänligen påminna Dig om att före användning kontrollera produktinformationen på produktens förpackning. Det här är så klart särskilt viktigt om Du av någon anledning vill undvika vissa ingredienser eller ämnen.</p>
+          </div>
+          <div class="tab-pane" id="tab-3">
+            <h3>Salami Milano
+            </h3>
+            <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+            <img src="assets/img/174981.webp" alt="" class="img-fluid">
+            <p>Innehåll
+              Griskött, salt, socker, druvsocker, kryddor och örtkryddor, antioxidationsmedel (E301), konserveringsmedel (E252, E250). Till 100g färdig produkt har använts 145g köttråvara. Ej ätbart korvskinn.</p>
+          </div>
+          <div class="tab-pane" id="tab-4">
+            <h3>Kaviar</h3>
+            <p class="fst-italic">
+              Kalles Original 300g är en stor tub för dig som verkligen älskar Kalles. Kaviaren är gjord på mildrökt rom och passar utmärkt som pålägg på frukostmackan, mellanmålet eller till kokta ägg! Kalles kaviar har varit hela Sveriges oersättliga favorit på frukostbordet sedan 1954.</p>
+            <img src="assets/img/253517.webp" alt="" class="img-fluid">
+            <p>Innehåll
+              Rökt sockersaltad TORSKrom (52%), rapsolja, socker, potatisflingor, tomatpuré, salt, konserveringsmedel (kaliumsorbat), antioxidationsmedel (askorbinsyra)</p>
+          </div>
         </div>
-
-        <div class="row gy-5">
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Magnam Tiste</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Aut Luia</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Est Eligendi</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Eos Luibusdam</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Eos Luibusdam</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Laboriosam Direva</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-        </div>
-      </div><!-- End Breakfast Menu Content -->
-
-      <div class="tab-pane fade" id="menu-lunch">
-
-        <div class="tab-header text-center">
-          <p>Menu ideas</p>
-          <h3>Lunch</h3>
-        </div>
-
-        <div class="row gy-5">
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Magnam Tiste</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Aut Luia</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Est Eligendi</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Eos Luibusdam</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Eos Luibusdam</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Laboriosam Direva</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-        </div>
-      </div><!-- End Lunch Menu Content -->
-
-      <div class="tab-pane fade" id="menu-dinner">
-
-        <div class="tab-header text-center">
-          <p>Menu ideas</p>
-          <h3>Dinner</h3>
-        </div>
-
-        <div class="row gy-5">
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Magnam Tiste</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Aut Luia</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Est Eligendi</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Eos Luibusdam</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Eos Luibusdam</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-          <div class="col-lg-4 menu-item">
-            <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
-            <h4>Laboriosam Direva</h4>
-            <p class="ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </p>
-          </div><!-- Menu Item -->
-
-        </div>
-      </div><!-- End Dinner Menu Content -->
-
+      </div>
     </div>
 
   </div>
-</section><!-- End Menu Section -->
+</section><!-- End Departments Section -->
