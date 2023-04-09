@@ -6,6 +6,7 @@ import { RecipeService } from 'src/app/Recipes/recipe.service';
   selector: 'app-recipe',
   templateUrl: './recipe.component.html',
   styleUrls: ['./recipe.component.css']
+ 
 })
 export class RecipeComponent {
 

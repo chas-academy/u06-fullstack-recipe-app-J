@@ -19,17 +19,16 @@ const routes: Routes = [
     children:[
           {path: '', component: ReceptComponent}, 
           {path:'login', component:LoginComponent},
-          {path:'logout',component:LoginComponent},          
+          {path:'logout',component:LoginComponent},   
+          {path: 'recipe/:id', component: RecipeComponent},       
      ]
 },
   {path: 'secure', component: SecureComponent},
   {path: 'register', component: RegisterComponent},
- {path: 'recipe/:id', component: RecipeComponent},
-
 ]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

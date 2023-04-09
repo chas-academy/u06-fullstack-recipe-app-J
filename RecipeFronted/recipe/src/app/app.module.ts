@@ -60,6 +60,8 @@ const routes: Routes = [
     RecipeComponent,
     ContactComponent,
   FooterComponent,
+  RecipeComponent,
+  
    
     
   ],
@@ -74,6 +76,7 @@ const routes: Routes = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    AppRoutingModule
     //CommonModule,
  
   ],
