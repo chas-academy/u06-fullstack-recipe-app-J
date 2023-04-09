@@ -2,6 +2,7 @@
 import { Component, OnInit} from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
 import { Register } from './register.model';
+import { FormGroup } from '@angular/forms';
 
 
 
@@ -29,7 +30,6 @@ export class RegisterComponent implements OnInit{
        this.message = this.data.message;
     })
    }
-  
   
   
   }

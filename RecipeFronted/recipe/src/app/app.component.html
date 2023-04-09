@@ -1,6 +1,6 @@
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
+  <nav class="container-fluid">
     <a class="navbar-brand" href="#">SUPER</a>
     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -23,16 +23,18 @@
        
        
       </ul>
-      <div class="navbar-nav">
+      <div >
   
-        <a  class="navbar-brand" routerLink="login" *ngIf="!loggedIn" >Login</a>
-        <a  class="navbar-brand" routerLink="/" (click)="logout" *ngIf="loggedIn" >Logout</a>
-      </div>
-      
-    </div>
+        <div >
+          <a  Login  routerLink="/login" routerLinkActive="active"   *ngIf="!this.isloggedIn" class="btn btn-danger m-2" >Login</a>
+          <a *ngIf="!this.userService.isLoggedIn" class="btn btn-outline-primary" routerLinkActive="active"
+            routerLinkActive="active" routerLink="/logout">Logout</a>
+          <button (click)="logoutUser()" *ngIf="this.userService.isLoggedIn" type="button" class="btn btn-danger">Logout</button>
+        </div>
   </div>
+</div>
 </nav>
-
+</nav>
 <router-outlet></router-outlet>
 
 <app-footer> </app-footer>

@@ -17,12 +17,9 @@ const routes: Routes = [
     path: '', 
     component: PublicComponent,
     children:[
-          {path: '', component: ReceptComponent},
-         {path: 'login', component: LoginComponent},
-         {path: 'logout', component: LogoutComponent},
-        // {path: '**', component: HomeComponent},
-    
-           
+          {path: '', component: ReceptComponent}, 
+          {path:'login', component:LoginComponent},
+          {path:'logout',component:LoginComponent},          
      ]
 },
   {path: 'secure', component: SecureComponent},

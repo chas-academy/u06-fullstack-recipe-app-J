@@ -12,11 +12,12 @@ import { Token } from '@angular/compiler';
   providedIn: 'root'
 })
 export class UserService {
- 
+  isLoggedIn=false;
   httpClient: any;
   
   configUrl =  "http://127.0.0.1:8000/api/"; 
   username: any=""
+  
 
   httpOptions ={
     headers: new HttpHeaders ({
@@ -27,7 +28,14 @@ export class UserService {
   }
 
   constructor(private http: HttpClient, private router:Router ) { }
+  doLogin() {
+    this.isLoggedIn=true;
+  }
+  
 
+  doLogout() {
+  this.isLoggedIn=true;
+  }
   loginUser(User: User){
      this.http.post<any>(this.configUrl + "login", User, this.httpOptions).pipe(catchError(this.handleError)).subscribe(res=>{
       console.log(res)
@@ -41,8 +49,14 @@ export class UserService {
      localStorage.removeItem('token')
     })
  }
+ signUp(user: User): Observable<any> {
+  let api = `${this.configUrl}/login`;
+  return this.http.post(api, user).pipe(catchError(this.handleError));
+}
 
-
+/* remove(){
+  return localStorage.removeItem('token');
+} */
 
 
   private handleError(error: HttpErrorResponse) {

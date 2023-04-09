@@ -15,36 +15,35 @@ import { HttpErrorResponse } from '@angular/common/http';
 export class AppComponent  implements OnInit{
 
 
-  constructor (private http:HttpClient,private router: Router) {
+  constructor (private http:HttpClient,private router: Router,
+    public userService: UserService) { }
 
-  }
-
-
-
+ localStorage: any;
+ logoutUser:any
   title = 'Recipe';
-  
-   
-  loggedIn = false;
+  isloggedIn = false;
 
 
   ngOnInit(): void{
-    this.loggedIn = localStorage.getItem('token') !== null;
+
+  /* this.loggedIn = localStorage.getItem('token') !== null;
     const headers = new HttpHeaders ({
       Authorization: `Bearer ${localStorage.removeItem('token')}`
     });
     console.log(localStorage.getItem('token'));
     this.http.post('http://127.0.0.1:8000/api/logout', {headers}).subscribe(
       result => console.log(result)
-    );
-  
+    ); 
+   */
   
   
   
   }
 
-  logout(){
-    localStorage.removeItem('token');
-    this.router.navigate(['/login']);
+/*   logout(event:MouseEvent){
+event.preventDefault();  
+this.User.remove();
+this.router.navigateByUrl('/login');  
    
-  }
+  } */
  }

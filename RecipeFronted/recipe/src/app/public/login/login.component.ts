@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -9,15 +9,19 @@ import { Router } from '@angular/router';
 
 })
 export class LoginComponent implements OnInit {
-  form!: FormGroup;
+  form!:FormGroup;
   loggedIn = false;
 
   constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {}
 
-  ngOnInit() {
-    this.form = this.fb.group({
-      email: '',
-      password: ''
+  ngOnInit():void {
+    this.form = this.createForm();
+  }
+
+  createForm():FormGroup{
+    return  this.fb.group({
+      email: ['' ,[Validators.required]],
+      password: ['', Validators.required]
     });
   }
 
@@ -33,6 +37,7 @@ export class LoginComponent implements OnInit {
       (result: any) => {
         localStorage.setItem('token', result.access_token);
         this.loggedIn = true;
+        this.form.reset();
         this.router.navigate(['/secure']);
       },
       error => {
@@ -42,5 +47,15 @@ export class LoginComponent implements OnInit {
     );
   }
 
+
+
+message(){
+  
+  if(this.form.invalid){
+    return;
+  }
+  alert("Du är inloggat");
+  console.log(this.form.value);
+}
 
 }
