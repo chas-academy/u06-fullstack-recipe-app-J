@@ -13,6 +13,7 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent  implements OnInit{
+  User: any;
 
 
   constructor (private http:HttpClient,private router: Router,
@@ -26,7 +27,7 @@ export class AppComponent  implements OnInit{
 
   ngOnInit(): void{
 
-  /* this.loggedIn = localStorage.getItem('token') !== null;
+  this.isloggedIn = localStorage.getItem('token') !== null;
     const headers = new HttpHeaders ({
       Authorization: `Bearer ${localStorage.removeItem('token')}`
     });
@@ -34,16 +35,11 @@ export class AppComponent  implements OnInit{
     this.http.post('http://127.0.0.1:8000/api/logout', {headers}).subscribe(
       result => console.log(result)
     ); 
-   */
-  
-  
   
   }
 
-/*   logout(event:MouseEvent){
-event.preventDefault();  
-this.User.remove();
+logout(){
 this.router.navigateByUrl('/login');  
    
-  } */
+  } 
  }

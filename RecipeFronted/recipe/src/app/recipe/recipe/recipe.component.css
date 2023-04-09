@@ -62,13 +62,14 @@ ul li{
 
 @media screen and (max-width: 999px) {
     body{
-        margin-top: 400px;
-        display: flex;
-        flex-wrap: wrap;
+        font-size: 14px;
+        margin: 0 5px;
+       
     }
     .recipediv{
         margin-top: 300px;
-        flex: 50%;
+       
         
     }
 }
+

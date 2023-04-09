@@ -15,7 +15,7 @@ export class UserService {
   isLoggedIn=false;
   httpClient: any;
   
-  configUrl =  "http://127.0.0.1:8000/api/"; 
+  configUrl =  "http://127.0.0.1:8000/"; 
   username: any=""
   
 
@@ -36,8 +36,8 @@ export class UserService {
   doLogout() {
   this.isLoggedIn=true;
   }
-  loginUser(User: User){
-     this.http.post<any>(this.configUrl + "login", User, this.httpOptions).pipe(catchError(this.handleError)).subscribe(res=>{
+  loginUser(user: User){
+     this.http.post<any>(this.configUrl + "login", user, this.httpOptions).pipe(catchError(this.handleError)).subscribe(res=>{
       console.log(res)
       localStorage.setItem("token", res.token)
      })
@@ -53,11 +53,6 @@ export class UserService {
   let api = `${this.configUrl}/login`;
   return this.http.post(api, user).pipe(catchError(this.handleError));
 }
-
-/* remove(){
-  return localStorage.removeItem('token');
-} */
-
 
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {
