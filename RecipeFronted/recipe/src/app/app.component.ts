@@ -26,14 +26,14 @@ export class AppComponent  implements OnInit{
 
   ngOnInit(): void{
 
- this.isloggedIn = localStorage.getItem('token') !== null;
+/*  this.isloggedIn = localStorage.getItem('token') !== null;
     const headers = new HttpHeaders ({
       Authorization: `Bearer ${localStorage.removeItem('token')}`
     });
     console.log(localStorage.getItem('token'));
     this.http.post('http://127.0.0.1:8000/api/logout', {headers}).subscribe(
       result => console.log(result)
-    );  
+    );  */ 
   
   }
 

@@ -15,8 +15,7 @@ import { ReceptComponent } from './recept/recept.component';
 import { RecipeComponent } from './recipe/recipe/recipe.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
-/* import { CommonModule } from '@angular/common';
-import { UserService } from './auth/user.service'; */
+
 
 
 
@@ -77,7 +76,7 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule
-    //CommonModule,
+   
  
   ],
   providers: [],
