@@ -31,11 +31,11 @@ export class UserService {
   doLogin() {
     this.isLoggedIn=true;
   }
-  
 
   doLogout() {
   this.isLoggedIn=true;
   }
+  
   loginUser(user: User){
      this.http.post<any>(this.configUrl + "login", user, this.httpOptions).pipe(catchError(this.handleError)).subscribe(res=>{
       console.log(res)

@@ -29,7 +29,7 @@
           <a  Login  routerLink="/login" routerLinkActive="active"   *ngIf="!this.isloggedIn" class="btn btn-danger m-2" >Login</a>
           <a *ngIf="!this.userService.isLoggedIn" class="btn btn-outline-primary" routerLinkActive="active"
             routerLinkActive="active" routerLink="/logout">Logout</a>
-          <button  *ngIf="this.userService.isLoggedIn" type="button" class="btn btn-danger" (click)="logout()">Logout</button>
+          <button  *ngIf="this.userService.isLoggedIn" type="button" class="btn btn-danger" (click)="logoutUser()">Logout</button>
         </div>
   </div>
 </div>
