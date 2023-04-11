@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
       password: formData.password
     };
 
-    this.http.post('http://127.0.0.1:8000/api/login', data).subscribe(
+    this.http.post('https://u06-fullstack-recipe-app-j-production.up.railway.app/api/login', data).subscribe(
       (result: any) => {
         localStorage.setItem('token', result.access_token);
         this.loggedIn = true;
