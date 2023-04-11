@@ -15,7 +15,7 @@ export class UserService {
   isLoggedIn=false;
   httpClient: any;
   
-  configUrl =  "https://u06-fullstack-recipe-app-j-production.up.railway.app/api/"; 
+  configUrl =  "http://127.0.0.1:8000/"; 
   username: any=""
   
 
