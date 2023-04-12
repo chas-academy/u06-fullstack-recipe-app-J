@@ -8,7 +8,6 @@ export class DataService {
 
   constructor(private httpClient:HttpClient) { }
 
-
   registerUser(data: Register){
     return this.httpClient.post('https://u06-fullstack-recipe-app-j-production.up.railway.app/api/register',data);
   }
