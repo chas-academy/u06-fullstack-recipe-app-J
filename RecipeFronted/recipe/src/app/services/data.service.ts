@@ -10,6 +10,6 @@ export class DataService {
 
 
   registerUser(data: Register){
-    return this.httpClient.post('https://u06-fullstack-recipe-app-j-production.up.railway.app/api/register',data);
+    return this.httpClient.post('http://127.0.0.1:8000/api/register',data);
   }
 }
